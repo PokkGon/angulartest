@@ -1,0 +1,131 @@
+/*Estilos globales*/
+body {
+  background-color: #e5e5e5;
+  color: #95989a;  
+}
+
+b,th{
+  color: #616161;
+}
+
+.form-control{
+  max-width: 300px;
+  border-radius: 0;
+}
+
+.btn {
+  border: 0;
+  border-radius: 3px;
+  padding: 7px 20px;
+  min-width: 160px;
+}
+
+a[ng-click]{
+  cursor: pointer;
+}
+
+/*Header*/
+header h3{
+  margin: 20px 0px;
+}
+
+/*Búsqueda*/
+.form-control[name="searchword"]{
+  margin: 5px 0;  
+  border: 0;
+  padding-left: 30px;
+}
+
+/*Tabla*/
+.table{
+  background-color: #FFFFFF;
+  table-layout:fixed;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.table-bordered>thead>tr>th{
+  border: 0;
+}
+
+table tr th:nth-child(2){
+  width: 70%;
+}
+
+.table td p{
+  margin-bottom: 0;
+}
+
+.table td:last-child p{
+  padding: 10px;
+}
+
+.table td .col-md-2{
+  padding-right: 0;
+}
+
+.table td .col-md-10 p:first-child {
+  margin: 5px 0;
+}
+
+.table td a{
+  color: #fab43d;
+  margin-top: 10px;
+  width: 60px;
+}
+
+/*Glyphicons*/
+.glyphicon{
+  color: #fab43d;
+}
+
+.glyphicon.glyphicon-search{
+  position: absolute;
+  top: 15px;
+  font-size: 16px;
+  left: 20px;
+}
+
+.glyphicon.glyphicon-plus-sign{
+  font-size: 16px;
+  color: white;
+  top: 3px;
+  padding-right: 5px;
+}
+
+.glyphicon.glyphicon-circle-arrow-right,.glyphicon.glyphicon-circle-arrow-left{
+  padding-left: 10px;
+  font-size: 16px;
+  top: 3px;
+}
+
+/*Modal*/
+.modal-dialog {
+  max-width: 450px;
+  color: #676a6c;
+}
+
+.modal-content {
+  border-radius: 0;
+}
+
+.modal-title{
+  font-weight: bold;
+}
+
+.modal-body{
+  background-color: #f9f9f9;
+  padding: 30px 0px;
+}
+
+.modal-body form{
+  max-width: 300px;
+}
+
+.modal-body label{
+  margin-bottom: 0;
+}
+
+.modal-body .required{
+  color: #fe863b;
+}

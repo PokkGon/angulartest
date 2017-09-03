@@ -1,0 +1,54 @@
+<header>
+  <div class="container">
+    <h3>Test <b>Beetrack</b></h3>
+  </div>
+</header>
+<main>
+  <div class="container">
+    <div class="row">
+      <!-- Búsqueda -->
+      <div class="col-md-6">
+        <form>
+          <span class="glyphicon glyphicon-search" aria-hidden="true"></span><input  class="form-control" type="text" name="searchword" placeholder="Buscar contacto..." ng-keyup="searchText($event)" ng-model="Users.search">      
+        </form>
+      </div>
+      <!-- Nuevo contacto -->
+      <div class="col-md-6">
+        <a ng-click="showModal()" class="btn btn-warning pull-right"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span>Nuevo contacto</a>
+      </div>
+      <!-- Tabla contactos -->
+      <div class="col-md-12">
+        <div class="table-responsive">
+          <table class="table table-hover table-bordered" ng-mouseleave="hide($event)">
+            <thead>
+              <tr>
+                <th>Nombre</th><th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody ng-if="Users.loading">
+              <tr><td colspan="2">Cargando...</td></tr>
+            </tbody>
+            <tbody ng-if="!Users.loading">
+              <tr ng-repeat="user in Users.data" ng-mouseenter="show($event)">
+                <td>
+                  <div class="col-md-2">
+                  <img ng-src="{{user.photo}}" class="img-circle img-responsive">
+                  </div>
+                  <div class="col-md-10">
+                    <p><b>{{user.name}}</b></p>
+                    <p><a class="hidden" ng-click="Users.eliminar(user.id)">Eliminar</a></p>
+                    <p><a class="aux">&nbsp;</a></p>
+                  </div>
+                </td>
+                <td><p>{{user.description}}</p></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <a ng-click="prevPage()" ng-if="Users.page>1" class="pull-left"><b>Anterior página</b> <span class="glyphicon glyphicon-circle-arrow-left" aria-hidden="true"></span></a>        
+        <a ng-click="nextPage()" ng-if="Users.data.length==10" class="pull-right"><b>Siguiente página</b> <span class="glyphicon glyphicon-circle-arrow-right" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </div>
+</main>
+<br>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Beetrack test</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  
+    <!-- Módulos -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <script src="lib/ui-bootstrap-tpls-2.4.0.min.js"></script>
+    <script src="lib/ng-lodash.min.js"></script>    
+
+    <!--Router-->
+    <script src="app/app.js"></script>
+
+    <!-- Controladores -->
+    <script src="app/controllers/table.controller.js"></script>
+    <script src="app/controllers/modal.controller.js"></script>
+    
+    <!-- Servicios-->
+    <script src="app/services/users.service.js"></script>
+  </head>
+  <body ng-app="miapp">
+    <div ui-view></div>
+  </body>
+</html>
